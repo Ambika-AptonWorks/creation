@@ -1,10 +1,23 @@
 <head>
     <link rel="stylesheet" href="education.css">
+    <script src="education.js"></script>
 </head>
 <body>
-    <img src="edu1.jpg"alt= "no image displayed">
-    <h3 >Educational details</h3>
-    <table border="1" bordercolor="white" cellspacing="5px" cellpadding="4px"  width="50%" height="40%"  >
+<header>
+ <div class="dropdown">
+    <input type="button" value="click to know about institutions" onclick="show()" class="button">
+    <div id="links">
+        <a href="https://collegedunia.com/college/28924-vivekanandha-college-of-technology-for-women-vctw-namakkal">vivekanandha college of technology for women-namakkal</a>
+        <a href="https://collegedunia.com/college/12727-adhiyamaan-college-of-engineering-hosur/courses-fees">Adhiyamaan college of engineering-hosur</a>
+    </div>
+ </div>
+</header>
+<section>
+    <img src="edu1.jpg" alt="no image found">
+    <form id="over">
+        <marquee onchange="over()" name="mar">Educational details</marquee>
+    </form>
+    <table border="1" bordercolor="white" cellspacing="5px" cellpadding="4px" width="30%" height="30%" >
         <tr>
             <th>Institution Name</th>
             <th>Course Name</th>
@@ -36,4 +49,6 @@
             <td>89%</td>
         </tr>
     </table>
+</section>
+<footer>copy rights &copy 2022</footer>
 </body>

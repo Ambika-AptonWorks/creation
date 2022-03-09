@@ -1,0 +1,200 @@
+<head>
+   <title>webpage</title>
+   <link rel="icon" href="onebit_08.png">
+</head>
+<style>
+*{
+    width:100%;
+    height:auto;
+}
+img{
+    width:1300px;
+    height:2600px;
+    opacity:0.6;
+    z-index:-1;
+    position:absolute;
+}
+</style>
+<body>
+    <img src="images/download.jpg" alt="no image found">
+<h1 align="center">WIKIPEDIA</h1>
+<ol type="I" start="I">
+  <li><a href="#ABSTRACT">ABSTRACT</a></li>
+  <li><a href="#INTRODUCTION">INTRODUCTION</a></li>
+  <li><a href="#PROPOSED MD5 ALGORITHM">PROPOSED MD5 ALGORITHM</a></li>
+  <li><a href="#CONCLUTION">CONCLUTION</a></li>
+</ol>
+<h3 id="ABSTRACT">ABSTRACT</h3>
+<p>The implementation of FPGA in MD5 algorithm is quicker when contrasted with programming execution,
+ however, the brute force attack on MD5 actually needs 2-128 cycles hypothetically. 
+ This work will investigate the conceivable outcomes of improving the speed of brute force on FPGA of MD5 calculation. 
+ The proposed plan/technique in FPGA to parallelize the quest for a secret key that was hashed with the MD5 calculation. 
+ As a proof of idea the understudy will then, at that point exhibit the outcome for different secret key lengths appropriate 
+ to run inside sensible measure of time, and compare performance with the sequential implementation of brute-force attack in
+ a Field Programmable gate array.<p>MD5 message digest algorithm takes a message of an arbitrary length and computes a fixed 128-bit hash output [3]. 
+One of the applications of this hash algorithm is to store passwords in a hashed form. The bruteforce attack of pre-image 
+type on MD5 hash needs a maximum of 2 128 iterations which is unmanageable because of impractical runtime or cost involved. 
+Attempts have been made to speed up the brute-force attack, for example, using GPUs (Graphics Processing Units). Another 
+useful method is to make use of the advantages offered by hardware. Hardware offers higher performance in terms of number 
+of trials per second. This work attempts to increase the speed of the brute-force attack on MD5 hash algorithm on an FPGA. 
+Pipelining of the logic improves the frequency of operation of the logic and parallelization gives higher speed in terms of 
+number of hash trials per second in case of the bruteforce attack on a hash algorithm. Both of these techniques and other design 
+& Hardware Description Language (HDL) coding techniques need to be employed for improving the speed of the brute-force attack.
+ In a pre-image type of brute-force attack on a hash algorithm, the hash is given and the corresponding input message is to be found. 
+ The method of generating guess input messages (hereinafter referred to as guess passwords or simply passwords) plays critical 
+ role in such a case. The emphasis will be on improving the cracking speed by efficient implementation of MD5 hash generation 
+ and guess passwords generation in an FPGA. The important factors to maximize the performance of brute-force attack are the 
+ number of parallel instances (of hash and password generators) that are running in a given FPGA, frequency of operation and 
+ power dissipation. An FPGA with high number of logic resources is required for this work. The brute-force attack is to be practically 
+ tested on an FPGA board and performance of the brute-force attack needs to be compared with the non-parallelized version as well as other
+ works in the literature (both software and hardware implementations).</p><p>MD5 message digest algorithm takes a message of an arbitrary length and computes a fixed 128-bit hash output [3]. 
+One of the applications of this hash algorithm is to store passwords in a hashed form. The bruteforce attack of pre-image 
+type on MD5 hash needs a maximum of 2 128 iterations which is unmanageable because of impractical runtime or cost involved. 
+Attempts have been made to speed up the brute-force attack, for example, using GPUs (Graphics Processing Units). Another 
+useful method is to make use of the advantages offered by hardware. Hardware offers higher performance in terms of number 
+of trials per second. This work attempts to increase the speed of the brute-force attack on MD5 hash algorithm on an FPGA. 
+Pipelining of the logic improves the frequency of operation of the logic and parallelization gives higher speed in terms of 
+number of hash trials per second in case of the bruteforce attack on a hash algorithm. Both of these techniques and other design 
+& Hardware Description Language (HDL) coding techniques need to be employed for improving the speed of the brute-force attack.
+ In a pre-image type of brute-force attack on a hash algorithm, the hash is given and the corresponding input message is to be found. 
+ The method of generating guess input messages (hereinafter referred to as guess passwords or simply passwords) plays critical 
+ role in such a case. The emphasis will be on improving the cracking speed by efficient implementation of MD5 hash generation 
+ and guess passwords generation in an FPGA. The important factors to maximize the performance of brute-force attack are the 
+ number of parallel instances (of hash and password generators) that are running in a given FPGA, frequency of operation and 
+ power dissipation. An FPGA with high number of logic resources is required for this work. The brute-force attack is to be practically 
+ tested on an FPGA board and performance of the brute-force attack needs to be compared with the non-parallelized version as well as other
+ works in the literature (both software and hardware implementations).</p>
+Keywords: FPGA, Brute force attack, MD5, Hash function.</p>
+<h3 id="INTRODUCTION">INTRODUCTION</h3>
+<p>MD5 message digest algorithm takes a message of an arbitrary length and computes a fixed 128-bit hash output [3]. 
+One of the applications of this hash algorithm is to store passwords in a hashed form. The bruteforce attack of pre-image 
+type on MD5 hash needs a maximum of 2 128 iterations which is unmanageable because of impractical runtime or cost involved. 
+Attempts have been made to speed up the brute-force attack, for example, using GPUs (Graphics Processing Units). Another 
+useful method is to make use of the advantages offered by hardware. Hardware offers higher performance in terms of number 
+of trials per second. This work attempts to increase the speed of the brute-force attack on MD5 hash algorithm on an FPGA. 
+Pipelining of the logic improves the frequency of operation of the logic and parallelization gives higher speed in terms of 
+number of hash trials per second in case of the bruteforce attack on a hash algorithm. Both of these techniques and other design 
+& Hardware Description Language (HDL) coding techniques need to be employed for improving the speed of the brute-force attack.
+ In a pre-image type of brute-force attack on a hash algorithm, the hash is given and the corresponding input message is to be found. 
+ The method of generating guess input messages (hereinafter referred to as guess passwords or simply passwords) plays critical 
+ role in such a case. The emphasis will be on improving the cracking speed by efficient implementation of MD5 hash generation 
+ and guess passwords generation in an FPGA. The important factors to maximize the performance of brute-force attack are the 
+ number of parallel instances (of hash and password generators) that are running in a given FPGA, frequency of operation and 
+ power dissipation. An FPGA with high number of logic resources is required for this work. The brute-force attack is to be practically 
+ tested on an FPGA board and performance of the brute-force attack needs to be compared with the non-parallelized version as well as other
+ works in the literature (both software and hardware implementations).</p>
+<h3 id="PROPOSED MD5 ALGORITHM">PROPOSED MD5 ALGORITHM</h3>
+<p>The core of MD5 is a calculation which is utilized for the preparing of the message. The message M is isolated into 512-digit 
+blocks which are handled independently we have several varieties of hash features that may be used to improve throughput. From the 
+varieties of hash futures we utilize MD5 hash function. Pipelining is demonstrated a best answer for diminishing time in any VLSI 
+architecture. A Direct Advanced Synthesizer (DDS) have been proposed by [5] which utilizes half and half wave pipelining and Organize 
+Revolution Computerized PC (CORDIC) calculation for programming characterized radios. The algorithm consists of four rounds, each of 
+which comprises 16 steps. </p>
+<p>The algorithm is performed as follows: first, values of A, B, C and D are stored into temporary variables. Then, every step
+operations are performed for i = 0 to 63 as follows:Finally, the values of the temporary variables are added to the values obtained from the algorithm, and the results are 
+stored in the registers A, B, C and D. When all the message blocks have been processed, the message digest of M is in A, B, C, and D. 
+Analysis and Optimization for MD5. The heart of MD5 is the algorithm which is used for calculating the values of A, B, C, and D in 
+every step operations. From Eq.1, we can see that the values of A, C, D can be got directly, while the calculation of B is quite complicated, which consists of four
+mod 232 additions, a logical function and a circular shift left operation, forming the critical path of the MD5 algorithm[7].
+And the delay of the critical path is: T=4×Delay(+) +Delay(R)+Delay</p>
+<p>MD5 message digest algorithm takes a message of an arbitrary length and computes a fixed 128-bit hash output [3]. 
+One of the applications of this hash algorithm is to store passwords in a hashed form. The bruteforce attack of pre-image 
+type on MD5 hash needs a maximum of 2 128 iterations which is unmanageable because of impractical runtime or cost involved. 
+Attempts have been made to speed up the brute-force attack, for example, using GPUs (Graphics Processing Units). Another 
+useful method is to make use of the advantages offered by hardware. Hardware offers higher performance in terms of number 
+of trials per second. This work attempts to increase the speed of the brute-force attack on MD5 hash algorithm on an FPGA. 
+Pipelining of the logic improves the frequency of operation of the logic and parallelization gives higher speed in terms of 
+number of hash trials per second in case of the bruteforce attack on a hash algorithm. Both of these techniques and other design 
+& Hardware Description Language (HDL) coding techniques need to be employed for improving the speed of the brute-force attack.
+ In a pre-image type of brute-force attack on a hash algorithm, the hash is given and the corresponding input message is to be found. 
+ The method of generating guess input messages (hereinafter referred to as guess passwords or simply passwords) plays critical 
+ role in such a case. The emphasis will be on improving the cracking speed by efficient implementation of MD5 hash generation 
+ and guess passwords generation in an FPGA. The important factors to maximize the performance of brute-force attack are the 
+ number of parallel instances (of hash and password generators) that are running in a given FPGA, frequency of operation and 
+ power dissipation. An FPGA with high number of logic resources is required for this work. The brute-force attack is to be practically 
+ tested on an FPGA board and performance of the brute-force attack needs to be compared with the non-parallelized version as well as other
+ works in the literature (both software and hardware implementations).</p><p>MD5 message digest algorithm takes a message of an arbitrary length and computes a fixed 128-bit hash output [3]. 
+One of the applications of this hash algorithm is to store passwords in a hashed form. The bruteforce attack of pre-image 
+type on MD5 hash needs a maximum of 2 128 iterations which is unmanageable because of impractical runtime or cost involved. 
+Attempts have been made to speed up the brute-force attack, for example, using GPUs (Graphics Processing Units). Another 
+useful method is to make use of the advantages offered by hardware. Hardware offers higher performance in terms of number 
+of trials per second. This work attempts to increase the speed of the brute-force attack on MD5 hash algorithm on an FPGA. 
+Pipelining of the logic improves the frequency of operation of the logic and parallelization gives higher speed in terms of 
+number of hash trials per second in case of the bruteforce attack on a hash algorithm. Both of these techniques and other design 
+& Hardware Description Language (HDL) coding techniques need to be employed for improving the speed of the brute-force attack.
+ In a pre-image type of brute-force attack on a hash algorithm, the hash is given and the corresponding input message is to be found. 
+ The method of generating guess input messages (hereinafter referred to as guess passwords or simply passwords) plays critical 
+ role in such a case. The emphasis will be on improving the cracking speed by efficient implementation of MD5 hash generation 
+ and guess passwords generation in an FPGA. The important factors to maximize the performance of brute-force attack are the 
+ number of parallel instances (of hash and password generators) that are running in a given FPGA, frequency of operation and 
+ power dissipation. An FPGA with high number of logic resources is required for this work. The brute-force attack is to be practically 
+ tested on an FPGA board and performance of the brute-force attack needs to be compared with the non-parallelized version as well as other
+ works in the literature (both software and hardware implementations).</p>
+<h3 id ="CONCLUTION"> CONCLUTION</h3>
+<p>MD5 message digest algorithm takes a message of an arbitrary length and computes a fixed 128-bit hash output [3]. 
+One of the applications of this hash algorithm is to store passwords in a hashed form. The bruteforce attack of pre-image 
+type on MD5 hash needs a maximum of 2 128 iterations which is unmanageable because of impractical runtime or cost involved. 
+Attempts have been made to speed up the brute-force attack, for example, using GPUs (Graphics Processing Units). Another 
+useful method is to make use of the advantages offered by hardware. Hardware offers higher performance in terms of number 
+of trials per second. This work attempts to increase the speed of the brute-force attack on MD5 hash algorithm on an FPGA. 
+Pipelining of the logic improves the frequency of operation of the logic and parallelization gives higher speed in terms of 
+number of hash trials per second in case of the bruteforce attack on a hash algorithm. Both of these techniques and other design 
+& Hardware Description Language (HDL) coding techniques need to be employed for improving the speed of the brute-force attack.
+ In a pre-image type of brute-force attack on a hash algorithm, the hash is given and the corresponding input message is to be found. 
+ The method of generating guess input messages (hereinafter referred to as guess passwords or simply passwords) plays critical 
+ role in such a case. The emphasis will be on improving the cracking speed by efficient implementation of MD5 hash generation 
+ and guess passwords generation in an FPGA. The important factors to maximize the performance of brute-force attack are the 
+ number of parallel instances (of hash and password generators) that are running in a given FPGA, frequency of operation and 
+ power dissipation. An FPGA with high number of logic resources is required for this work. The brute-force attack is to be practically 
+ tested on an FPGA board and performance of the brute-force attack needs to be compared with the non-parallelized version as well as other
+ works in the literature (both software and hardware implementations).</p>
+ <p>MD5 message digest algorithm takes a message of an arbitrary length and computes a fixed 128-bit hash output [3]. 
+One of the applications of this hash algorithm is to store passwords in a hashed form. The bruteforce attack of pre-image 
+type on MD5 hash needs a maximum of 2 128 iterations which is unmanageable because of impractical runtime or cost involved. 
+Attempts have been made to speed up the brute-force attack, for example, using GPUs (Graphics Processing Units). Another 
+useful method is to make use of the advantages offered by hardware. Hardware offers higher performance in terms of number 
+of trials per second. This work attempts to increase the speed of the brute-force attack on MD5 hash algorithm on an FPGA. 
+Pipelining of the logic improves the frequency of operation of the logic and parallelization gives higher speed in terms of 
+number of hash trials per second in case of the bruteforce attack on a hash algorithm. Both of these techniques and other design 
+& Hardware Description Language (HDL) coding techniques need to be employed for improving the speed of the brute-force attack.
+ In a pre-image type of brute-force attack on a hash algorithm, the hash is given and the corresponding input message is to be found. 
+ The method of generating guess input messages (hereinafter referred to as guess passwords or simply passwords) plays critical 
+ role in such a case. The emphasis will be on improving the cracking speed by efficient implementation of MD5 hash generation 
+ and guess passwords generation in an FPGA. The important factors to maximize the performance of brute-force attack are the 
+ number of parallel instances (of hash and password generators) that are running in a given FPGA, frequency of operation and 
+ power dissipation. An FPGA with high number of logic resources is required for this work. The brute-force attack is to be practically 
+ tested on an FPGA board and performance of the brute-force attack needs to be compared with the non-parallelized version as well as other
+ works in the literature (both software and hardware implementations).</p><p>MD5 message digest algorithm takes a message of an arbitrary length and computes a fixed 128-bit hash output [3]. 
+One of the applications of this hash algorithm is to store passwords in a hashed form. The bruteforce attack of pre-image 
+type on MD5 hash needs a maximum of 2 128 iterations which is unmanageable because of impractical runtime or cost involved. 
+Attempts have been made to speed up the brute-force attack, for example, using GPUs (Graphics Processing Units). Another 
+useful method is to make use of the advantages offered by hardware. Hardware offers higher performance in terms of number 
+of trials per second. This work attempts to increase the speed of the brute-force attack on MD5 hash algorithm on an FPGA. 
+Pipelining of the logic improves the frequency of operation of the logic and parallelization gives higher speed in terms of 
+number of hash trials per second in case of the bruteforce attack on a hash algorithm. Both of these techniques and other design 
+& Hardware Description Language (HDL) coding techniques need to be employed for improving the speed of the brute-force attack.
+ In a pre-image type of brute-force attack on a hash algorithm, the hash is given and the corresponding input message is to be found. 
+ The method of generating guess input messages (hereinafter referred to as guess passwords or simply passwords) plays critical 
+ role in such a case. The emphasis will be on improving the cracking speed by efficient implementation of MD5 hash generation 
+ and guess passwords generation in an FPGA. The important factors to maximize the performance of brute-force attack are the 
+ number of parallel instances (of hash and password generators) that are running in a given FPGA, frequency of operation and 
+ power dissipation. An FPGA with high number of logic resources is required for this work. The brute-force attack is to be practically 
+ tested on an FPGA board and performance of the brute-force attack needs to be compared with the non-parallelized version as well as other
+ works in the literature (both software and hardware implementations).</p><p>MD5 message digest algorithm takes a message of an arbitrary length and computes a fixed 128-bit hash output [3]. 
+One of the applications of this hash algorithm is to store passwords in a hashed form. The bruteforce attack of pre-image 
+type on MD5 hash needs a maximum of 2 128 iterations which is unmanageable because of impractical runtime or cost involved. 
+Attempts have been made to speed up the brute-force attack, for example, using GPUs (Graphics Processing Units). Another 
+useful method is to make use of the advantages offered by hardware. Hardware offers higher performance in terms of number 
+of trials per second. This work attempts to increase the speed of the brute-force attack on MD5 hash algorithm on an FPGA. 
+Pipelining of the logic improves the frequency of operation of the logic and parallelization gives higher speed in terms of 
+number of hash trials per second in case of the bruteforce attack on a hash algorithm. Both of these techniques and other design 
+& Hardware Description Language (HDL) coding techniques need to be employed for improving the speed of the brute-force attack.
+ In a pre-image type of brute-force attack on a hash algorithm, the hash is given and the corresponding input message is to be found. 
+ The method of generating guess input messages (hereinafter referred to as guess passwords or simply passwords) plays critical 
+ role in such a case. The emphasis will be on improving the cracking speed by efficient implementation of MD5 hash generation 
+ and guess passwords generation in an FPGA. The important factors to maximize the performance of brute-force attack are the 
+ number of parallel instances (of hash and password generators) that are running in a given FPGA, frequency of operation and 
+ power dissipation. An FPGA with high number of logic resources is required for this work. The brute-force attack is to be practically 
+ tested on an FPGA board and performance of the brute-force attack needs to be compared with the non-parallelized version as well as other
+ works in the literature (both software and hardware implementations).</p>
+ </body>
