@@ -16,18 +16,26 @@
       }
       h1{
         text-align:"center";
-        margin: 10px 0px 100px 300px;
+        margin: 10px 0px 70px 400px;
+      }
+      .btn-group{
+        float:left;
+        width:0px;
       }
       section{
-          width:100%;
-          height:536px;
-          border:1px solid black;
-          background-image: url(back.jpg);
-          background-repeat: no-repeat;
-          background-size: 100% 100%;
+        width:100%;
+        height:400px;
+        
       }
-      .progress,span{
-          margin:15px 0px 0px 300px;
+      nav,section{
+        background-image: url(back.jpg);
+        background-position: absolute;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      
+      .progress, #title{
+          margin:5px 0px 0px 400px;
           color:black;
           width:300px;
           height:20px;
@@ -39,6 +47,10 @@
        width:100%;
        height:30px;
        background-color: aliceblue;
+      }
+      nav{
+        width:100%;
+        height:50px;
       }
       footer{
         border :1px solid black;
@@ -73,19 +85,88 @@
         <span class="visually-hidden"></span>
       </div>
 </header>
+<nav>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="btn-group">
+        <button  class="btn btn-primary">HTML</button>
+        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+             <span class="caret"></span>
+         </button>
+         <ul class="dropdown-menu" role="menu">
+             <li><a href="#">HTML entities</a></li>
+             <li><a href="#">Semantic tags</a></li>
+             <li><a href="#">Form attributes</a></li>
+             <li><a href="#">Layout tags</a></li>
+         </ul>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="btn-group">
+        <button  class="btn btn-info">CSS</button>
+          <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+               <span class="caret"></span>
+           </button>
+           <ul class="dropdown-menu" role="menu">
+               <li><a href="#">Selectors</a></li>
+               <li><a href="#">Formating styles</a></li>
+               <li><a href="#">Boxmodel</a></li>
+               <li><a href="#">Animation</a></li>
+               <li><a href="#">Transform methods</a></li>
+               <li><a href="#">Media queries</a></li>
+           </ul>
+        </div>
+    </div>
+    <div class="col-md-3">
+      <div class="btn-group">
+        <button  class="btn btn-success">Javascript</button>
+          <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+               <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+               <li><a href="#">Pre-defined methods</a></li>
+               <li><a href="#">Operators</a></li>
+               <li><a href="#">Control structures</a></li>
+               <li><a href="#">Patterns</a></li>
+               <li><a href="#">User-defined functions</a></li>
+               <li><a href="#">Events</a></li>
+               <li><a href="#">DOM implementation in js</a></li>
+          </ul>
+      </div>
+     </div>
+     <div class="col-md-3">
+       <div class="btn-group">
+        <button  class="btn btn-danger">Python</button>
+          <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+               <span class="caret"></span>
+           </button>
+           <ul class="dropdown-menu" role="menu">
+               <li><a href="#">Core Python</a></li>
+               <li><a href="#">Django implementation in python</a></li>
+               <li><a href="#">DB server</a></li>
+               <li><a href="#">SQL in python</a></li>
+           </ul>
+       </div>
+     </div>
+  </div>
+</nav>
 <section>
     <h1>My skills</h1>
-    <span>HTML</span>
+    <span id="title">HTML</span>
     <div class="progress">
-        <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
     </div>
-    <span>CSS</span>
+    <span id="title">CSS</span>
       <div class="progress">
-        <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
       </div>
-      <span>JavaScript</span>
+      <span id="title">JavaScript</span>
       <div class="progress">
-        <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+      </div>
+      <span id="title">Python</span>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
       </div>
 </section>
 <footer>
