@@ -1,7 +1,7 @@
 
 body{
     width:100%;
-    height:500px;
+    height:auto;
 }
 header{
     width:100%;
@@ -10,13 +10,13 @@ header{
 }
 section{
     width:99%;
-    height:500px;
+    height:520px;
     border:1px solid white;
     position:absolute;
 }
 section img{
     width:100%;
-    height:500px;
+    height:520px;
     position:absolute;
     opacity:0.4;
     z-index:-1;
@@ -39,10 +39,10 @@ marquee{
 }
 footer{
     width:100%;
-    height:10x;
+    height:13x;
     color:white;
     font-weight: bold;
     text-align: center;
     background-color: black;
-    margin-top:500px;
+    margin-top:530px;
 }
