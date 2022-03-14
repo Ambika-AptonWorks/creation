@@ -3,7 +3,7 @@ body{
     height:450px;
 }
 header,nav,footer{
-    background-image:url(images.jpg);
+    background-image:url(images/images.jpg);
     background-repeat:no-repeat;
     background-size: 100% 100%;
 }
